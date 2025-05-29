@@ -5,6 +5,8 @@ function displayWeather(response) {
   let descriptionELement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("#icon");
+  let iconUrl = response.data.condition.icon_url;
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   console.log(response.data);
@@ -12,8 +14,11 @@ function displayWeather(response) {
   timeElement.innerHTML = formatDate(date);
   descriptionELement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
+
   windElement.innerHTML = `${Math.round(response.data.wind.speed)}`;
   temperatureElement.innerHTML = `${temperature}`;
+
+  iconElement.innerHTML = `<img src="${iconUrl}" alt="${description}" class="weather-icon" />`;
 }
 
 function formatDate(date) {
