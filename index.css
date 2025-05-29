@@ -34,3 +34,33 @@ body {
 main {
   padding: 30px 0;
 }
+.weather-data {
+  line-height: 1.5;
+  font-size: 18px;
+}
+hr {
+  border: 0.1px solid #5c5c5c;
+}
+#humidity,
+#wind-speed,
+#city-temperature {
+  font-weight: bold;
+}
+#city-temperature {
+  font-size: 50px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.temperature {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -50px;
+}
+#icon {
+  position: relative;
+  top: -25px;
+
+  margin-left: none;
+}
+

@@ -25,20 +25,25 @@
         </form>
       </header>
       <main>
+        <hr />
         <div>
           <h1 id="city-weather"></h1>
-          <p>
-            <span id="time"></span> <span id="description"></span>
 
+          <div class="weather-data">
+            <span id="time"></span> <span id="description"></span>
             <br />
-            Humidity: <span id="humidity"></span>%
-            <br />
-            Wind Speed: <span id="wind-speed"></span> km/h
-          </p>
+
+            Humidity: <span id="humidity"></span>, Wind Speed:
+            <span id="wind-speed"></span>
+          </div>
         </div>
         <div>
-          <span class="city-temperature" id="city-temperature"></span>°C <span id="icon">🌤️</span>
+          <div class="temperature">
+            <span class="city-temperature" id="city-temperature"></span>°C
+            <span id="icon"></span>
+          </div>
         </div>
+        <hr />
       </main>
       <footer>
         <p>
