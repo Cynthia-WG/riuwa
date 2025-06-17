@@ -9,10 +9,12 @@ function displayWeather(response) {
   let iconUrl = response.data.condition.icon_url;
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+
   console.log(response.data);
+
   city.innerHTML = response.data.city;
-  timeElement.innerHTML = formatDate(date);
-  descriptionELement.innerHTML = response.data.condition.description;
+  timeElement.innerHTML = `${formatDate(date)} `;
+  descriptionELement.innerHTML = `${response.data.condition.description}`;
   humidityElement.innerHTML = response.data.temperature.humidity;
 
   windElement.innerHTML = `${Math.round(response.data.wind.speed)}`;
@@ -52,6 +54,7 @@ function submitCity(event) {
   city.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
+
 let searchElement = document.querySelector("#search-form");
 searchElement.addEventListener("submit", submitCity);
 

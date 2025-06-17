@@ -38,9 +38,6 @@ main {
   line-height: 1.5;
   font-size: 18px;
 }
-hr {
-  border: 0.1px solid #5c5c5c;
-}
 #humidity,
 #wind-speed,
 #city-temperature {
@@ -57,10 +54,12 @@ hr {
   position: relative;
   top: -50px;
 }
+.degrees {
+  top: 30px;
+  font-size: 20px;
+}
 #icon {
   position: relative;
   top: -25px;
-
   margin-left: none;
 }
-
